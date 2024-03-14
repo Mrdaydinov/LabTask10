@@ -9,12 +9,12 @@
 
             //for (int i = 1; i <= 10; i++)
             //{
-            //    Console.WriteLine(i*n);
+            //    Console.WriteLine($"{n} X {i} = {n*i}");
             //}
 
 
             //////
-            
+
 
             int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
             int[] arr1 = new int[arr.Length / 3];
@@ -22,21 +22,12 @@
             int[] arr3 = new int[arr.Length / 3];
 
             int index = 0;
-            for (int i = 0; i < arr.Length; i += 3)
-            {
-                arr1[index] = arr[i];
-                index++;
-            }
-            index = 0;
-            for (int i = 1; i < arr.Length; i += 3)
-            {
-                arr2[index] = arr[i];
-                index++;
-            }
-            index = 0;
+            
             for (int i = 2; i < arr.Length; i += 3)
             {
                 arr3[index] = arr[i];
+                arr2[index] = arr[i-1];
+                arr1[index] = arr[i-2];
                 index++;
             }
 
